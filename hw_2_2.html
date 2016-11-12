@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset = "UTF-8"/>
+<head>
+	<title>Book search</title>
+</head>
+<style type = "text/css">
+body{background-color:6666FF;}
+fieldset{margin-left:100px;
+	margin-right:100px;}
+	div{text-align:center;}
+	table{margin-left:270px;}
+	body{width:1200px;}
+	h1{text-align:center;}
+	#content{text-align:center;
+		margin-left:20px;
+		margin-right:20px;
+		background-color:6666FF;}
+	.button{color:red;}
+	.head{font-weight:bold;
+		font-size:30pt;
+		font-style:italic;
+		text-align:center;}
+</style>
+
+<body>
+	<p class = "head">bookland</p>
+	<div>
+	
+		<fieldset>
+			<table>
+				<tr><td>Author name:</td><td><input type = "text" id = "name" size = 50 /></td><tr>
+				<tr><td>Book title:</td><td><input type = "text" id = "title" size = 50></td></tr>
+				<tr><td></td><td><input type = "button" class = "button" value = "Find book" onclick = "findbook();"/><input type ="button" class = "button" value ="Clear Info" onclick = "clearcontent();"/></td></tr>
+			</table>
+			<textarea id = "content" rows = "30" cols = "100"></textarea>
+		</fieldset>
+	</from>
+	</div>
+<script type="text/javascript">
+
+function findbook(){
+	
+	var authorarray = ["Thomas Mann", "James Joyce", "E. M. Forster", "Isabel Allende","Isabel Allende"];
+	var titlearray = ["Death in Venice","A portrait of the artist as a young man","A room with a view","The house of spirits","Of love and shadows"];
+	var contentarray = ["Description: One of the most famous literary works of the twentieth century, this novella embodies themes that preoccupied Thomas Mann in much of his work: the duality of art and life, the presence of death and disintegration in the midst of existence, the connection between love and suffering and the conflict between the artist and his inner self.","Description: This book is a fictional re-creation of the Irish writer's own life and early environment. The experiences of the novel's young hero, unfold in astonishingly vivid scenes that seem freshly recalled from life and provide a powerful portrait of the coming of age of a young man of unusual intelligence, sensitivity and character. ","Description: This work displays an unusually perceptive view of British society in the early 20th century.It is a social comedy set in Florence,Italy, and Surrey, England. Its heroine, Lucy Honeychurch, struggling against straitlaced Victorian attitudes of arrogance, narroe mindedness and sobbery, falls in love - while on holiday in Italy - with the socially unsuitable George Emerson.","Description: Allende describes the life of three generations of a prominent family in Chile and skillfully combines with this all the main historical events of the time, up until Pinochet's dictatorship.","Description: The whole world of Irene Beltran, a young reporter in Chile at the time of the dictatorship, is destroyed when she discovers a series  of killings carried out by government soldiers. With the help of a photographer, Francisco Leal, and risking her life, she tries to come up with evidence against the dictatorship."];
+var author  = document.getElementById("name").value;
+var book = document.getElementById("title").value;
+
+for (var i = 0; i <= 4; i++){
+	if (author == authorarray[i] || book == titlearray[i]){
+		 document.getElementById("content").value = contentarray[i];}
+}	
+}
+function clearcontent(){
+	document.getElementById("name").value = "";
+	document.getElementById("title").value = "";
+	document.getElementById("content").value = "";
+}
+</script>
+</body>
+</html>
