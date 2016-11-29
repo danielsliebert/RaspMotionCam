@@ -18,7 +18,7 @@ def main():
   motions.insert_one(motion)
 
 def connectMongo():
-  connection = pymongo.MongoClient("mongodb://danieldionthant:qpf16g8@ds037175.mlab.com:37175/rpi_surveillance")
+  connection = pymongo.MongoClient("mongodb://admin:admin@ds037175.mlab.com:37175/rpi_surveillance")
   db = connection.rpi_surveillance
   return db
 
