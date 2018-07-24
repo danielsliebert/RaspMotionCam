@@ -1,5 +1,5 @@
 # RaspMotionCam
-Our team created a motion-detecting surveillance device using a camera module attached to a Raspberry Pi. When motion is detected a script runs which uploads the current date and time to a cloud database. On our website, these times are pulled from the database and can be viewed to see trends in movement activity.
+Motion-detecting surveillance device using a camera module attached to a Raspberry Pi. When motion is detected a script runs which records and uploads the current date and time to an online, "cloud" database. A provided website documents these times by retrieving them from the aforementioned database and displaying them in an easy-to-interpret fashion. Additionally, the data can be analyzed on the website to view trends. 
 
 # Materials
 Raspberry Pi Model 3 Model B
